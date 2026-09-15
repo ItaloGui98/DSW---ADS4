@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema</title>
+</head>
+<body>
+    <h1 id="titulo">Título</h1>
+    <button id="botao">Mudar Tema</button>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .tema-escuro {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        const botao = document.getElementById('botao');
+        const titulo = document.getElementById('titulo');
+
+        botao.addEventListener('click', () => {
+            document.body.classList.toggle('tema-escuro');
+            titulo.classList.toggle('tema-escuro');
+        });
+    </script>
+</body>
+</html>
