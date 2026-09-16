@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Itens</title>
+
+    <style>
+        .destaque {
+            color: white;
+            background-color: #726b6b;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Lista de Itens</h1>
+
+    <ul id="lista">
+        <li>Vasco</li>
+        <li>Real Madrid</li>
+        <li>Campeonato Brasileiro</li>
+        <li>Ítalo Guilherme Barros</li>
+        <li>Ítalo Guilherme Barros da Silva</li>
+    </ul>
+
+    <script>
+        const lista = document.querySelectorAll("#lista li");
+
+        const limite = 15;
+
+        lista.forEach(function(item) {
+            if (item.textContent.length > limite) {
+                item.classList.add("destaque");
+            }
+        });
+    </script>
+
+</body>
+</html>

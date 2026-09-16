@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarefas</title>
+
+    <style>
+        .concluida {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        li {
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de tarefas</h1>
+
+    <ul id="tarefas">
+        <li>Estudar</li>
+        <li>Fazer exercícios</li>
+        <li>Ler</li>
+        <li>Correr</li>
+        <li>Ir ao mercado</li>
+    </ul>
+</body>
+</html>
+
+<script>
+    const tarefas = document.querySelectorAll("#tarefas li");
+
+    tarefas.forEach(function(tarefa) {
+
+        tarefa.addEventListener("click", function() {
+
+            tarefa.classList.toggle("concluida");
+
+        });
+
+    });
+</script>

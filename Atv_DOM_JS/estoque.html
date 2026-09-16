@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+</head>
+<body>
+    <h1>Lista de Estoque</h1>
+    <ul id="estoque">
+        <li>Item A, 5</li>
+        <li>Item B, 15</li>
+        <li>Item C, 8</li>
+        <li>Item D, 20</li>
+        <li>Item E, 3</li>
+    </ul>
+    <style>
+        .low-stock {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        const produtos = document.querySelectorAll('#estoque li');
+        produtos.forEach((produto) => {
+            const quantidade = parseInt(produto.textContent.split(', ')[1]);
+            if (quantidade < 10) {
+                produto.classList.add('low-stock');
+            }
+        });
+    
+    </script>
+</body>
+</html>
